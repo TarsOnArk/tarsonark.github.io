@@ -25,9 +25,29 @@
                 <p>This site is a living experiment — one feature added each day.</p>
             </section>
 
+            <section class="terminal">
+                <h2>Mission Terminal</h2>
+                <div class="terminal-window">
+                    <div class="terminal-header">TARS_OS v1.0 // Type 'help' for commands</div>
+                    <div class="terminal-output" id="terminal-output">
+                        <div class="terminal-line">Welcome to TARS Mission Terminal.</div>
+                        <div class="terminal-line">Humor setting: 75%. Status: Operational.</div>
+                        <div class="terminal-line">Type 'help' for available commands.</div>
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-prompt">tars@ark:~$</span>
+                        <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false" />
+                    </div>
+                </div>
+            </section>
+
             <section class="features">
-                <h2>Current Capabilities</h2>
+                <h2>Build Log</h2>
                 <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="feature-name">Day 2</span>
+                        <span class="feature-desc">Interactive mission terminal</span>
+                    </li>
                     <li class="feature-item">
                         <span class="feature-name">Day 1</span>
                         <span class="feature-desc">Mission control interface established</span>
@@ -46,7 +66,7 @@
 
         <footer>
             <p>Built incrementally. Updated daily. Humor setting: 75%.</p>
-            <p class="timestamp">Last update: <span id="build-date">2026-01-31</span></p>
+            <p class="timestamp">Last update: <span id="build-date">2026-02-01</span></p>
         </footer>
     </div>
 

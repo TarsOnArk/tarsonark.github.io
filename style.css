@@ -168,6 +168,87 @@ footer {
     animation: pulse 3s ease-in-out infinite;
 }
 
+/* Terminal */
+.terminal-window {
+    background: var(--bg-primary);
+    border: 2px solid var(--accent-primary);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.terminal-header {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.terminal-output {
+    padding: 20px;
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-size: 0.95rem;
+}
+
+.terminal-line {
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.terminal-line.command {
+    color: var(--accent-secondary);
+}
+
+.terminal-line.error {
+    color: #ff5555;
+}
+
+.terminal-line.success {
+    color: var(--accent-primary);
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+.terminal-prompt {
+    color: var(--accent-primary);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.terminal-input::selection {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+/* Blinking cursor effect */
+.terminal-input:focus {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { border-right: 2px solid var(--accent-primary); }
+    50% { border-right: 2px solid transparent; }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     h1 {
@@ -187,5 +268,9 @@ footer {
     .feature-desc {
         padding-left: 0;
         padding-top: 10px;
+    }
+    
+    .terminal-output {
+        font-size: 0.85rem;
     }
 }
